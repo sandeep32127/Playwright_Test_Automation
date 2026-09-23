@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
+//const devices = require('@playwright/test')
 
 /**
  * Read environment variables from file.
@@ -65,7 +66,7 @@ export default defineConfig({
 
     {
       name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      use: { ...devices['Desktop Safari']},
     },
   ],
 

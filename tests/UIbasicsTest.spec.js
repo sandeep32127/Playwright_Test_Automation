@@ -91,6 +91,7 @@ test('Test child window', async ({browser})=>{
     await expect(newpage).toHaveURL(/.*documents-request/);
     const textNewPage = await newpage.locator('.im-para.red').textContent();
     console.log(textNewPage);
+    //context.pages();
     const usernameExtracted = textNewPage.split("@")[1].split(" ")[0];
     console.log(usernameExtracted);
     await page.locator('#username').clear();

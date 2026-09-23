@@ -17,5 +17,5 @@ test('testing alerts and dialogs', async ({page})=>{
     await page.locator('#mousehover').hover();
     await expect(page.locator('.mouse-hover-content')).toBeVisible();
     await page.getByRole('link',{name:'Top'}).click();
-    const framesPage = page.frame("iframe-name");
+    const framesPage = page.frameLocator("iframe-name");
 });
