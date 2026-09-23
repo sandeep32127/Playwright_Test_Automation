@@ -15,7 +15,7 @@ test.beforeAll('the before all suite for tests', async({browser})=>{
     await btnLogin.click();
     const itemTitles = page.locator('.card-body b');   
     await itemTitles.first().waitFor();
-    await context.storageState({path:'auth.json'});
+    await context.storageState({path:'auth.json'});//
     webContext =  await browser.newContext({storageState:'auth.json'});
 
 });
